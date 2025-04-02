@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Assign Manager";
+}
+
+<h2>Assign Manager</h2>
+
+<button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#assignManagerModal">
+    Assign Manager
+</button>
+
+<div class="modal fade" id="assignManagerModal" tabindex="-1" aria-labelledby="assignManagerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="employeeSelect">Select Employee:</label>
+                    <select id="employeeSelect" class="form-control"></select>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="managerSelect">Select Manager:</label>
+                    <select id="managerSelect" class="form-control"></select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="assignManager()">Assign</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex mb-2 mt-2">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Assigned Manager</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody"></tbody>
+    </table>
+</div>
+
+<nav>
+    <ul class="pagination justify-content-center" id="pagination"></ul>
+</nav>
+
+<div id="message"></div>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<!-- Toastr CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<!-- jQuery (Ensure this is loaded before Bootstrap JS) -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<!-- Bootstrap Bundle JS (Includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+@section scripts {
+    <script src="~/js/Scripts/HR/AssignManager.js" asp-append-version="true"></script>
+}

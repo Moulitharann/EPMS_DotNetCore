@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Performance Review";
+}
+<head></head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-primary">Performance Review</h2>
+
+        <div class="form-group">
+            <label for="employeeSelect" class="font-weight-bold">Select Employee:</label>
+            <select id="employeeSelect" class="form-control"></select>
+        </div>
+
+        <button id="conductEvaluation" class="btn btn-success mt-2">Conduct Evaluation</button>
+        <button id="generateReport" class="btn btn-info mt-2" disabled>Generate Report</button>
+    </div>
+
+    <div class="container mt-3">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>SI</th>
+                    <th>Employee Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable">
+                <tr><td colspan="3">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            let managerId = localStorage.getItem("Id");
+
+            fetch(`http://localhost:5207/api/manager/getEvaluationRecord/${managerId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Failed to fetch data");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Fetched Data:", data);
+                    let tableBody = document.getElementById("employeeTable");
+                    tableBody.innerHTML = "";
+
+                    if (!Array.isArray(data) || data.length === 0) {
+                        tableBody.innerHTML = "<tr><td colspan='3' class='text-center'>No records found</td></tr>";
+                        return;
+                    }
+
+                    let rows = data.map((employee, index) => `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${employee.employeeName}</td>
+                            <td>${employee.score}</td>
+                        </tr>
+                    `).join("");
+
+                    tableBody.innerHTML = rows;
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById("employeeTable").innerHTML = "<tr><td colspan='3' class='text-danger text-center'>Error loading data</td></tr>";
+                });
+        });
+    </script>
+
+    <script src="~/js/Scripts/Manager/PerformancesReview.js" asp-append-version="true"></script>
+</body>

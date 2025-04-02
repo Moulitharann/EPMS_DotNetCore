@@ -1,0 +1,78 @@
+﻿body {
+}
+.toast-success {
+    background-color: green !important; /* Bright Green */
+    color: white !important;
+}
+
+.toast-error {
+    background-color: red !important; /* Bright Red */
+    color: white !important;
+}
+
+.toast-warning {
+    background-color: yellow !important; /* Bright Yellow */
+    color: black !important;
+}
+.pagination {
+    margin-top: 10px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.history-container {
+    max-width: 700px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.card {
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+.icon {
+    font-size: 18px;
+    color: #007bff;
+    margin-right: 8px;
+}
+
+/*displaying css for */
+body {
+    background-color: #f8f9fa;
+}
+
+.history-container {
+    max-width: 700px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.card {
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+.icon {
+    font-size: 18px;
+    color: #007bff;
+    margin-right: 8px;
+}

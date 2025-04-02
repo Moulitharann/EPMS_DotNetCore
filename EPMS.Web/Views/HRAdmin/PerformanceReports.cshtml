@@ -1,0 +1,61 @@
+﻿@model List<EmployeePerformancesManagementSystem.MVC.Models.PerformanceReport>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Performance Reports</h2>
+        <div class="btn-group">
+            <button id="downloadExcel" class="btn btn-success"><i class="fas fa-file-excel"></i> Download Excel</button>
+            <button id="downloadPdf" class="btn btn-danger"><i class="fas fa-file-pdf"></i> Download PDF</button>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <h4 class="mb-3 fw-semibold">Performance Review</h4>
+
+            <div class="row align-items-center mb-3">
+                <div class="col-md-6">
+                    <label for="categorySelect" class="form-label fw-medium">Select Category:</label>
+                    <select id="categorySelect" class="form-select"></select>
+                </div>
+                <div class="col-md-6 d-flex gap-2 justify-content-md-end mt-3 mt-md-0">
+                    <button id="conductEvaluation" class="btn btn-primary"><i class="fas fa-check-circle"></i> Conduct Evaluation</button>
+                    <button id="generatepdfReport" class="btn bg-success"><i class="fas fa-file-excel"></i>Download as Excel </button>
+                    <button id="generateReport" class="btn btn-danger"><i class="fas fa-download"></i> Generate and Download PDF</button>
+                </div>
+
+                <div class="table-responsive mt-3">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Category</th>
+                                <th>Performance Score</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="performanceTableBody">
+                            <!-- Performance reports will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="~/js/Scripts/HR/PerformanceReports.js" asp-append-version="true"></script>

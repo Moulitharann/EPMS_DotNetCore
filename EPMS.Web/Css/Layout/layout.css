@@ -1,0 +1,17 @@
+﻿body {
+}
+.nav-link.active {
+    font-weight: bold;
+    color: black !important;
+    border-radius: 5px;
+}
+
+.custom-logout-btn {
+    background-color: #d3d3d3 !important; /* Light grey */
+    color: black !important; /* Text color */
+    border-color: #bfbfbf !important; /* Border */
+}
+
+    .custom-logout-btn:hover {
+        background-color: #bfbfbf !important; /* Darker grey on hover */
+    }

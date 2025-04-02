@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\Scripts\Auth\Login.js" />
+    <None Include="wwwroot\js\Scripts\Auth\Register.js" />
+    <None Include="wwwroot\js\Scripts\bootstrap.bundle.js" />
+    <None Include="wwwroot\js\Scripts\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\js\Scripts\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\js\Scripts\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\js\Scripts\bootstrap.esm.js" />
+    <None Include="wwwroot\js\Scripts\bootstrap.esm.js.map" />
+    <None Include="wwwroot\js\Scripts\bootstrap.esm.min.js" />
+    <None Include="wwwroot\js\Scripts\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\js\Scripts\bootstrap.js" />
+    <None Include="wwwroot\js\Scripts\bootstrap.js.map" />
+    <None Include="wwwroot\js\Scripts\bootstrap.min.js" />
+    <None Include="wwwroot\js\Scripts\bootstrap.min.js.map" />
+    <None Include="wwwroot\js\Scripts\Employee Scripts\Employee.js" />
+    <None Include="wwwroot\js\Scripts\Employee Scripts\EmployeeFeedback.js" />
+    <None Include="wwwroot\js\Scripts\Employee Scripts\EmployeePerformanceshistroy.js" />
+    <None Include="wwwroot\js\Scripts\Employee Scripts\EmployeeScript.js" />
+    <None Include="wwwroot\js\Scripts\HR\AssignManager.js" />
+    <None Include="wwwroot\js\Scripts\HR\Dashboard.js" />
+    <None Include="wwwroot\js\Scripts\HR\Employee.js" />
+    <None Include="wwwroot\js\Scripts\HR\Evalution.js" />
+    <None Include="wwwroot\js\Scripts\HR\ExportReports.js" />
+    <None Include="wwwroot\js\Scripts\HR\PerformanceReports.js" />
+    <None Include="wwwroot\js\Scripts\HR\ReviewCycles.js" />
+    <None Include="wwwroot\js\Scripts\jquery-3.7.0.intellisense.js" />
+    <None Include="wwwroot\js\Scripts\jquery-3.7.0.js" />
+    <None Include="wwwroot\js\Scripts\jquery-3.7.0.min.js" />
+    <None Include="wwwroot\js\Scripts\jquery-3.7.0.min.map" />
+    <None Include="wwwroot\js\Scripts\jquery-3.7.0.slim.js" />
+    <None Include="wwwroot\js\Scripts\jquery-3.7.0.slim.min.js" />
+    <None Include="wwwroot\js\Scripts\jquery-3.7.0.slim.min.map" />
+    <None Include="wwwroot\js\Scripts\jquery.validate-vsdoc.js" />
+    <None Include="wwwroot\js\Scripts\jquery.validate.js" />
+    <None Include="wwwroot\js\Scripts\jquery.validate.min.js" />
+    <None Include="wwwroot\js\Scripts\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\js\Scripts\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\js\Scripts\Layout\layout.js" />
+    <None Include="wwwroot\js\Scripts\Manager\Assigngoals.js" />
+    <None Include="wwwroot\js\Scripts\Manager\Dashboard.js" />
+    <None Include="wwwroot\js\Scripts\Manager\Feedback.js" />
+    <None Include="wwwroot\js\Scripts\Manager\PerformancesReview.js" />
+    <None Include="wwwroot\js\Scripts\modernizr-2.8.3.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EPMS.Api\EPMS.Api.csproj" />
+    <ProjectReference Include="..\EPMS.Core\EPMS.Core.csproj" />
+    <ProjectReference Include="..\EPMS.Data\EPMS.Data.csproj" />
+  </ItemGroup>
+
+</Project>
