@@ -2,19 +2,10 @@ services:
   - type: web
     name: EPMS-Api
     runtime: dotnet
-    buildCommand: "dotnet publish EPMS.Api -c Release -o out"
+    buildCommand: "dotnet publish -c Release -o out"
     startCommand: "dotnet out/EPMS.Api.dll"
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
       - key: DOTNET_VERSION
-        value: 6.0  # Change this based on your .NET version
-
-  - type: web
-    name: EPMS-Web
-    runtime: node
-    buildCommand: "npm install && npm run build"
-    startCommand: "npm start"
-    envVars:
-      - key: NODE_ENV
-        value: production
+        value: 6.0  # Update based on your .NET version
